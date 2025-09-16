@@ -3,7 +3,7 @@
   Estructura: HTML + CSS sin dependencias, listo para GitHub Pages
 ========== */
 
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Montserrat:wght@400;500;600&display=swap');
 :root{
   /* BRAND TOKENS */
   --brand-1: #567472;   /* Titulares / acentos principales */
