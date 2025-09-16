@@ -181,3 +181,30 @@ a:hover{text-decoration:underline}
 .footer{padding:40px 0;color:var(--ink-2);font-size:.9rem}
 .footer__inner{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
 .footer a{color:var(--brand-1)}
+
+
+/* Igualar altura en las filas de 2 columnas (Servicios) */
+.feature{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--gap);
+  align-items: stretch;      /* ⬅️ hace que ambas columnas midan igual */
+}
+.feature .card{
+  height: 100%;              /* ⬅️ la tarjeta ocupa toda la altura disponible */
+  display: flex;             /* opcional: para que el contenido fluya bien */
+  flex-direction: column;    /* opcional */
+}
+
+/* Igualar altura en grillas de 3 columnas (Áreas), por si lo necesitas allí también */
+.grid-3{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--gap);
+  align-items: stretch;      /* ⬅️ todas las columnas igual altura */
+}
+.grid-3 .card{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
