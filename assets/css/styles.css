@@ -6,11 +6,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Montserrat:wght@400;500;600&display=swap');
 :root{
   /* BRAND TOKENS */
-  --brand-1: #567472;   /* Titulares / acentos principales */
+  --brand-1: #7C4D91;   /* Titulares / acentos principales */
   --brand-2: #D7DDD9;   /* Fondo suave */
-  --brand-3: #567472;   /* Botones / links */
-  --brand-4: #3d5553;   /* Secundario oscuro */
-  --brand-5: #c6cec8;   /* Badge suave */
+  --brand-3: #7C4D91;   /* Botones / links */
+  --brand-4: #D56B1A;   /* Secundario oscuro */
+  --brand-5: #D56B1A;   /* Badge suave */
   --ink-1:   #1a1f1e;   /* Texto principal */
   --ink-2:   #4b5654;   /* Texto secundario */
   --white:   #FFFFFF;
@@ -23,7 +23,7 @@
   --pad:  clamp(18px, 3.2vw, 32px);
   --pad-lg: clamp(32px, 5vw, 60px);
 
-  --font-display: "Bebas Neue", sans-serif;
+  --font-display: "Caprasimo", sans-serif;
   --font-text: "Montserrat", sans-serif;
 }
 
