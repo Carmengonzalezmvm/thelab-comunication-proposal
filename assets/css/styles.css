@@ -236,7 +236,7 @@ html, body { overflow-x: hidden; }
     word-break: break-word;
   }
 }
-}
+
 
 /* 4) Tipos y espaciados más cómodos en móvil */
 @media (max-width: 640px){
@@ -263,4 +263,25 @@ html, body { overflow-x: hidden; }
   .hero{ padding: 28px 0 36px; }
   .hero h1{ font-size: clamp(24px, 8vw, 30px); }
   .hero p{ font-size: 0.98rem; }
+}
+
+/* FIX: última fila (05 y 06) en móvil sin desbordes */
+@media (max-width: 900px){
+  /* Solo la tercera 'feature' (donde están 05 y 06) pasa a 1 columna */
+  .feature:nth-of-type(3){
+    grid-template-columns: 1fr !important;
+    gap: calc(var(--gap) * 0.9);
+  }
+  .feature:nth-of-type(3) .card{
+    min-width: 0;
+    max-width: 100%;
+    height: auto;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+}
+
+/* (Opcional) Clip de desbordes horizontales residuales en móviles pequeños */
+@media (max-width: 640px){
+  html, body, .section, .container { overflow-x: clip; }
 }
