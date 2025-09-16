@@ -3,6 +3,7 @@
   Estructura: HTML + CSS sin dependencias, listo para GitHub Pages
 ========== */
 
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600&display=swap');
 :root{
   /* BRAND TOKENS */
   --brand-1: #567472;   /* Titulares / acentos principales */
@@ -22,8 +23,8 @@
   --pad:  clamp(18px, 3.2vw, 32px);
   --pad-lg: clamp(32px, 5vw, 60px);
 
-  --font-display: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans";
-  --font-text: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans";
+  --font-display: "Bebas Neue", sans-serif;
+  --font-text: "Montserrat", sans-serif;
 }
 
 *{box-sizing:border-box}
