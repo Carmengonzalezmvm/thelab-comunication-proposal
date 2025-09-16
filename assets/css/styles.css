@@ -208,3 +208,59 @@ a:hover{text-decoration:underline}
   display: flex;
   flex-direction: column;
 }
+/* ====== MOBILE TUNING ====== */
+
+/* 1) Evitar cualquier scroll lateral accidental */
+html, body { overflow-x: hidden; }
+.section, .container { overflow-x: hidden; }
+
+/* 2) ÁREAS: forzar 1 columna en móviles */
+@media (max-width: 780px){
+  .grid-3{
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: calc(var(--gap) * 0.9);
+  }
+  .grid-3 .card{
+    height: auto;           /* no estirar de más en móvil */
+  }
+}
+
+/* Solución solo para tarjetas 05 y 06 en pantallas pequeñas */
+@media (max-width: 900px){
+  .feature .card:nth-child(5),
+  .feature .card:nth-child(6){
+    min-width: 0;           /* permite que se encojan */
+    max-width: 100%;         /* no se salgan de la pantalla */
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+}
+}
+
+/* 4) Tipos y espaciados más cómodos en móvil */
+@media (max-width: 640px){
+  .h{ font-size: clamp(20px, 6vw, 26px); }
+  .sub{ font-size: 0.95rem; }
+  .tag{ font-size: .75rem; }
+  .section{ padding: 28px 0; }
+  .card{ padding: clamp(14px, 4.5vw, 22px); }
+}
+
+/* 5) Badges y headers de tarjeta más compactos en móvil */
+@media (max-width: 640px){
+  .badge{ font-size: .74rem; padding: .28rem .6rem; }
+  .card .kicker{ font-size: .78rem; }
+}
+
+/* 6) Nav: asegurar que no empuje el layout en pantallas pequeñas */
+@media (max-width: 820px){
+  .menu a{ display: none; }   /* ya lo tenías, lo reforzamos */
+}
+
+/* 7) Hero ya es responsive; afinamos pequeñas cosas */
+@media (max-width: 640px){
+  .hero{ padding: 28px 0 36px; }
+  .hero h1{ font-size: clamp(24px, 8vw, 30px); }
+  .hero p{ font-size: 0.98rem; }
+}
